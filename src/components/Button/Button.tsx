@@ -24,7 +24,7 @@ const getSizeStyles = (size: string) => {
   });
 };
 
-export const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
   text,
   variant = "primary",
   size = "md",
@@ -48,3 +48,5 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+
+export default Button;

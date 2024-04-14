@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
+import tailwindcss from "tailwindcss";
 import { peerDependencies } from "./package.json";
 
 export default defineConfig({
@@ -12,9 +13,21 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [...Object.keys(peerDependencies)], // Defines external dependencies for Rollup bundling.
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          tailwindcss: "tailwindcss",
+        },
+      },
     },
     sourcemap: true, // Generates source maps for debugging.
     emptyOutDir: true, // Clears the output directory before building.
   },
-  plugins: [dts()], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
+  plugins: [dts({ rollupTypes: true })], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
+  css: {
+    postcss: {
+      plugins: [tailwindcss],
+    },
+  },
 });
