@@ -23,5 +23,5 @@
     "declaration": true // Generates declaration files for TypeScript.
   },
   "include": ["src"], // Specifies the directory to include when searching for TypeScript files.
-  "exclude": ["src/**/__docs__", "src/**/__test__"]
+  "exclude": ["node_modules", "dist"]
 }
