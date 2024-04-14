@@ -1,6 +1,5 @@
 {
   "name": "@erichayesjohnson/acl-2",
-  "private": "false",
   "version": "0.0.0",
   "description": "React component library using tailwind",
   "type": "module",
