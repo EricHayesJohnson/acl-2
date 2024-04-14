@@ -3,7 +3,6 @@ import dts from "vite-plugin-dts";
 import tailwindcss from "tailwindcss";
 import { resolve } from "path";
 import react from "@vitejs/plugin-react";
-import "./src/tailwind.css";
 
 // import { peerDependencies } from "./package.json";
 
