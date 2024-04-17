@@ -15,7 +15,7 @@ export default defineConfig({
       formats: ["cjs", "es"], // Specifies the output formats (CommonJS and ES modules).
     },
     rollupOptions: {
-      external: ["react", "react-dom", "tailwindcss"], // Defines external dependencies for Rollup bundling.
+      external: ["react", "react-dom", "tailwindcss", "classnames"], // Defines external dependencies for Rollup bundling.
       output: {
         globals: {
           react: "React",
